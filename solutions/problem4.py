@@ -22,7 +22,7 @@ def main():
     print(ans1)
 
 
-def parse_input(line: str) -> list[Section, Section]:
+def parse_input(line: str) -> list[Section]:
     line = line.strip("\n")
     sections = line.split(",")
     ret = []
