@@ -14,11 +14,11 @@ class Point2D:
         return f"({self.x}, {self.y})"
 
 
-# def print_points_2D(points: list[tuple[int, int]]) -> None:
-#     max_x = max([x[0] for x in points])
-#     max_y = max([x[1] for x in points])
-#     arr: list[list[int]] = []
-#     for _ in range(max_y):
-#         arr.append([0] * max_x)
-#     for point in points:
-#         arr[point[0]][point[1]] = 1
+def extract_numbers_from_string(s: str) -> list[int]:
+    newstr = "".join((x if x in "0123456789" else " ") for x in s)
+    return [int(i) for i in newstr.split()]
+
+
+def extract_characters_from_string(s: str, chars: str) -> list[str]:
+    newstr = "".join((x if x in chars else " ") for x in s)
+    return newstr.split()
